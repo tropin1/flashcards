@@ -1,0 +1,37 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  margin: 48px auto;
+  width: 80%;
+  font-size: 17px;
+}
+
+p {
+  font-size: 22px;
+}
+
+#container > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 46px;
+}
+
+#container > header > h1 {
+  margin: 0;
+}
+
+.navigation-links li {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.navigation-links li a {
+  text-decoration: none;
+  color: #5444f6;
+}
+
+.navigation-links li:hover a {
+  border-bottom: 1px solid #5444f6;
+}
