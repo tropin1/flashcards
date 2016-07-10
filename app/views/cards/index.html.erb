@@ -4,7 +4,7 @@
     <article class="item-cards">
       <div class="item-card"><%= cards.original_text%></div>
       <div class="item-card"><%= cards.translated_text%></div>
-      <div class="item-card"><%= cards.review_date %></div>
+      <div class="item-card"><%= cards.review_date.strftime("%d.%m.%y") %></div>
     </article>
   <% end %>
 </section>
