@@ -1,0 +1,10 @@
+<h2>Все карточки</h2>
+<section>
+   <% @cards.each do |cards| %>
+    <article class="item-cards">
+      <div class="item-card"><%= cards.original_text%></div>
+      <div class="item-card"><%= cards.translated_text%></div>
+      <div class="item-card"><%= cards.review_date %></div>
+    </article>
+  <% end %>
+</section>

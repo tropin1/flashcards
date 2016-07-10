@@ -1,7 +1,7 @@
 #container {
   display: flex;
   flex-direction: column;
-  margin: 48px auto;
+  margin: 0 auto;
   width: 80%;
   font-size: 17px;
 }
@@ -9,7 +9,14 @@
 p {
   font-size: 22px;
 }
-
+body {
+  font-family: arial;
+}
+.main-title {
+  margin:0;
+  text-shadow: 2px 2px 2px #cec8c8;
+  color: #5058ea;
+}
 #container > header {
   display: flex;
   justify-content: space-between;
@@ -34,4 +41,8 @@ p {
 
 .navigation-links li:hover a {
   border-bottom: 1px solid #5444f6;
+}
+.item-cards {
+  padding:10px 5px;
+  border-bottom: 1px solid #bfbaba;
 }

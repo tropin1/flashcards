@@ -8,16 +8,14 @@
   </head>
   <section id="container">
     <header>
-        <h1>Флэшкарточкер</h1>
+        <h1 class="main-title">Флэшкарточкер</h1>
         <ul class="navigation-links">
-          <li><%= link_to "Все карточки", '#' %></li>
+          <li><%= link_to "Все карточки", controller: 'cards' %></li>
           <li><%= link_to "Добавить карточку", '#' %></li>
         </ul>
     </header>
     <body>
-      <p>
-        <%= yield %>
-      </p>
+      <%= yield %>
     </body>
   </section>
 </html>
