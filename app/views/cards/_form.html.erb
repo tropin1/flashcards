@@ -1,0 +1,16 @@
+<% if @card.errors.any? %>
+  <div class="error_explanation">
+    <h3><%= pluralize(@card.errors.count, "Error") %> prohibited this article from being saved:</h3>
+    <ul>
+    <% @card.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= simple_form_for @card do |f| %>
+    <%= f.input :original_text, label: "Оригинал" %>
+    <%= f.input :translated_text, label: "Перевод" %>
+    <%= f.submit "Отправить" %>
+<% end %>

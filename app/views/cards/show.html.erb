@@ -1,0 +1,13 @@
+    <article class="item-cards">
+	    <div class="content-card">
+    		<div class="item-card"><i>Оригинал: </i><%= @card.original_text%></div>
+   			<div class="item-card"><i>Перевод: </i><%= @card.translated_text%></div>
+    		<div class="item-card"><i>Дата просмотра: </i><%= @card.review_date.strftime("%d.%m.%y") %></div>
+		</div>
+	    <div class="tools-card">
+      		<%= link_to 'Редактировать', edit_card_path %>
+      		<%= link_to 'Удалить', card_path,
+					              method: :delete,
+					              data: { confirm: 'Удалить карточку?' } %>
+  		</div>
+    </article>

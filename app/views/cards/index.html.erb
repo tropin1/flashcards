@@ -1,10 +1,18 @@
-<h2>Все карточки</h2>
+<div class="title-ollcards">
+  <h2>Все карточки</h2>
+  <%= link_to 'Создать', new_card_path %>
+</div>
 <section>
    <% @cards.each do |cards| %>
     <article class="item-cards">
-      <div class="item-card"><%= cards.original_text%></div>
-      <div class="item-card"><%= cards.translated_text%></div>
-      <div class="item-card"><%= cards.review_date.strftime("%d.%m.%y") %></div>
+      <div class="content-card">
+        <div class="item-card"><i>Оригинал: </i><%= cards.original_text%></div>
+        <div class="item-card"><i>Перевод: </i><%= cards.translated_text%></div>
+        <div class="item-card"><i>Дата просмотра: </i><%= cards.review_date.strftime("%d.%m.%y") %></div>
+      </div>
+      <div class="tools-card">
+      <%= link_to 'Открыть', card_path(cards) %>
+      </div>
     </article>
   <% end %>
 </section>
