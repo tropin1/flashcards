@@ -12,6 +12,15 @@ p {
 body {
   font-family: arial;
 }
+a {
+  text-decoration: none;
+  color: #5444f6;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  border-bottom: 1px solid #5444f6;
+}
 .main-title {
   margin:0;
   text-shadow: 2px 2px 2px #cec8c8;
@@ -34,15 +43,44 @@ body {
   margin: 0 16px;
 }
 
-.navigation-links li a {
-  text-decoration: none;
-  color: #5444f6;
-}
-
-.navigation-links li:hover a {
-  border-bottom: 1px solid #5444f6;
-}
 .item-cards {
+  display: flex;
+  justify-content: space-between;
   padding:10px 5px;
   border-bottom: 1px solid #bfbaba;
+}
+
+.tools-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+}
+
+.error_explanation {
+  border: 1px solid red;
+  color: rgb(243, 74, 74);
+  background-color: antiquewhite;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.input {
+  margin-bottom: 10px;
+}
+
+.text {
+  display: block
+}
+
+.title-ollcards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+i {
+  font-size: 15px;
+  color: rgb(130, 130, 135);
 }
