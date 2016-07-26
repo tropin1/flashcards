@@ -1,8 +1,7 @@
 <h3><%= @random.original_text%></h3>  
 <%= form_tag pages_path do %>
     <%= text_field_tag :check_text %>
-    <%=hidden_field_tag 'id', @random.id %>
-    <%=hidden_field_tag 'translated_text', @random.translated_text %>
+    <%=hidden_field_tag 'id', @random.id %> 
     <button>Проверить</button> 
 <% end %>
  

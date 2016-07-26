@@ -18,15 +18,15 @@ class Card < ApplicationRecord
       self.review_date = Date.today + 3
   end
 
-  def random_card 
+  def self.random_card 
      Card.where('review_date <= ?', Date.today).order('random()').take
   end
 
-  def  chek_card (check_text, translated_text) 
-    check_text == translated_text
+  def  chek_card (check_text ) 
+    check_text == self.translated_text
   end 
 
-  def  re_save_date(id)
+  def  increase_review_date(id)
    Card.find(id).update(review_date: Date.today + 3) 
   end
 end
