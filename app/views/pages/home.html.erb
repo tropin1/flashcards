@@ -1,1 +1,8 @@
-Первый в мире удобный менеджер флеш-карточек. Именно так.
+<h3><%= @random.original_text%></h3>  
+<%= form_tag pages_path do %>
+    <%= text_field_tag :check_text %>
+    <%=hidden_field_tag 'id', @random.id %>
+    <%=hidden_field_tag 'translated_text', @random.translated_text %>
+    <button>Проверить</button> 
+<% end %>
+ 
