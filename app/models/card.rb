@@ -9,8 +9,24 @@ end
 class Card < ApplicationRecord
 	validates :original_text, :translated_text, :review_date,  presence: true
 	validates :original_text, :translated_text, uniqueness: { case_sensitive: false } 
-    validates_with Double_text 
+  validates_with Double_text 
 	before_validation do |card_date|
-       self.review_date = Date.today + 3
-    end
+      card_date_create
+  end
+  
+  def card_date_create
+      self.review_date = Date.today + 3
+  end
+
+  def self.random_card 
+     Card.where('review_date <= ?', Date.today).order('random()').take
+  end
+
+  def  chek_card (check_text ) 
+    check_text == self.translated_text
+  end 
+
+  def  increase_review_date(id)
+   Card.find(id).update(review_date: Date.today + 3) 
+  end
 end

@@ -19,17 +19,16 @@ class CardsController < ApplicationController
     @card = Card.create(card_params)
       if @card.errors.empty?
       redirect_to @card
-    else
-      render 'new'
+      
   	end
   end
 
   def update
     @card = Card.find(params[:id])
-  if @card.update(card_params)
-    redirect_to @card
-  else
-    render 'edit'
+    if @card.update(card_params)
+      redirect_to @card
+    else
+      render 'edit'
    end
   end
 

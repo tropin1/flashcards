@@ -8,13 +8,19 @@
   </head>
   <section id="container">
     <header>
-        <h1 class="main-title">Флэшкарточкер</h1>
+        <h1 class="main-title"><%= link_to "Флэшкарточкер",  home_path %></h1>
         <ul class="navigation-links">
           <li><%= link_to "Все карточки", controller: 'cards' %></li>
-          <li><%= link_to "Добавить карточку", '#' %></li>
+          <li><%= link_to "Добавить карточку", new_card_path %></li>
         </ul>
     </header>
     <body>
+      <% if flash[:error] %>
+        <div class="error_explanation"><%= flash[:error] %></div>
+      <% end %>
+      <% if flash[:message] %>
+        <div class="message_explanation"><%= flash[:message] %></div>
+      <% end %>
       <%= yield %>
     </body>
   </section>

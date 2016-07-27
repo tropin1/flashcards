@@ -26,6 +26,9 @@ a:hover {
   text-shadow: 2px 2px 2px #cec8c8;
   color: #5058ea;
 }
+.main-title a {
+  border: none;
+}
 #container > header {
   display: flex;
   justify-content: space-between;
@@ -62,10 +65,16 @@ a:hover {
   border: 1px solid red;
   color: rgb(243, 74, 74);
   background-color: antiquewhite;
-  padding-left: 20px;
+  padding: 10px 20px;
   margin-bottom: 10px;
 }
-
+.message_explanation {
+  border: 1px solid #00d2ff;
+  color: rgb(16, 78, 171);
+  background-color: #eafff8;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
 .input {
   margin-bottom: 10px;
 }
